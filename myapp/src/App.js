@@ -9,36 +9,36 @@ function App() {
 
   // console.log(person.name, person.age);
 
-  // const person = [
-  //   {
-  //       name: "Amit",
-  //       age: 25,
-  //   },
-  //   {
-  //       name: "Piyush",
-  //       age: 40,
-  //   },
+  const person = [
+    {
+        name: "Amit",
+        age: 25,
+    },
+    {
+        name: "Piyush",
+        age: 40,
+    },
 
 
-  // ];
+  ];
 
-  // person.map((p) => console.log(p.name, p.age));
+  person.map((p) => console.log(p.name, p.age));
 
-  const person = {
-    name: "Amit",
-    age: 25,
-    course: [
-      "C",
-      "HTML"
-    ]
-  }
+  // const person = {
+  //   name: "Amit",
+  //   age: 25,
+  //   course: [
+  //     "C",
+  //     "HTML"
+  //   ]
+  // }
 
-  for (let k in person)
-    if (k === 'course') {
-      person[k].map((p) => console.log(p));
-    } else {
-      console.log(person[k]);
-    }
+  // for (let k in person)
+  //   if (k === 'course') {
+  //     person[k].map((p) => console.log(p));
+  //   } else {
+  //     console.log(person[k]);
+  //   }
 
 
   //   const person = [
