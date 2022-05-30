@@ -24,46 +24,46 @@ function App() {
 
   // person.map((p) => console.log(p.name, p.age));
 
-  // const person = {
-  //   name: "Amit",
-  //   age: 25,
-  //   course: [
-  //     "C",
-  //     "HTML"
-  //   ]
-  // }
+  const person = {
+    name: "Amit",
+    age: 25,
+    course: [
+      "C",
+      "HTML"
+    ]
+  }
 
-  // for (let k in person)
-  //   if (k === 'course') {
-  //     person[k].map((p) => console.log(p));
-  //   } else {
-  //     console.log(person[k]);
-  //   }
+  for (let k in person)
+    if (k === 'course') {
+      person[k].map((p) => console.log(p));
+    } else {
+      console.log(person[k]);
+    }
 
 
-    const person = [
-      {
-          name: "Amit",
-          age: 25,
-          course: [
-              "C",
-              "HTML"
-          ]
-      },
-      {
-          name: "Ajay",
-          age: 40,
-          course: [
-              "Java",
-              "JavaScript"
-          ]
-      }
-  ]
+  //   const person = [
+  //     {
+  //         name: "Amit",
+  //         age: 25,
+  //         course: [
+  //             "C",
+  //             "HTML"
+  //         ]
+  //     },
+  //     {
+  //         name: "Ajay",
+  //         age: 40,
+  //         course: [
+  //             "Java",
+  //             "JavaScript"
+  //         ]
+  //     }
+  // ]
 
-  person.map((p) =>{
-    console.log(p.name, p.age);
-    p.course.map((p) => console.log(p));
-  });
+  // person.map((p) =>{
+  //   console.log(p.name, p.age);
+  //   p.course.map((p) => console.log(p));
+  // });
 
   // const myObj = {
   //   name: "John",
