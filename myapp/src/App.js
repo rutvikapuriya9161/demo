@@ -2,27 +2,27 @@ import logo from './logo.svg';
 import './App.css';
 import Demo from './Component/Demo';
 function App() {
-  //   const person = {
-  //     name: "Amit",
-  //     age: 25
-  // }
+    const person = {
+      name: "Amit",
+      age: 25
+  }
 
-  // console.log(person.name, person.age);
+  console.log(person.name, person.age);
 
-  const person = [
-    {
-        name: "Amit",
-        age: 25,
-    },
-    {
-        name: "Piyush",
-        age: 40,
-    },
+  // const person = [
+  //   {
+  //       name: "Amit",
+  //       age: 25,
+  //   },
+  //   {
+  //       name: "Piyush",
+  //       age: 40,
+  //   },
 
 
-  ];
+  // ];
 
-  person.map((p) => console.log(p.name, p.age));
+  // person.map((p) => console.log(p.name, p.age));
 
   // const person = {
   //   name: "Amit",
