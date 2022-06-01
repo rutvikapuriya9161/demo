@@ -46,6 +46,9 @@ function App() {
     }
   ];
 
+  let fData = data.filter((d,i) => d.status === true && d.expiry >= 2022);
+  let ans = fData.reduce((acc, d, i) => acc + d.price ,0);
+  console.log(ans);
 
   return (
     <div>
@@ -57,17 +60,20 @@ function App() {
           <th>price</th>
           <th>expiry</th>
           <th>status</th>
+          <th>totel price</th>
         </tr>
         {
-          data.map((d,i) => {
+          fData.map((d,i) => {
+            let { id, name,quantity, price, expiry, status} = d;
             return(
             <tr>
-              <td>{d.id}</td>
-              <td>{d.name}</td>
-              <td>{d.quantity}</td>
-              <td>{d.price}</td>
-              <td>{d.expiry}</td>
-              <td>{d.status.toString()}</td>
+              <td>{id}</td>
+              <td>{name}</td>
+              <td>{quantity}</td>
+              <td>{price}</td>
+              <td>{expiry}</td>
+              <td>{status.toString()}</td>
+              {i === 0 ? <td rowSpan={5}>{ans}</td> : null}
             </tr>
             )
           })
