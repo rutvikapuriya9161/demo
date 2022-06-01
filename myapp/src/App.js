@@ -5,75 +5,69 @@ function App() {
   let data =
   [
     {
-      id: 101,
-      name: 'Abacavir',
-      quantity: 25,
-      price: 150,
-      expiry: 2022,
+      name: "amit",
+      age: 35,
+      salary: 40000,
+      bonus: 1000,
       status: true
     },
     {
-      id: 102,
-      name: 'Eltrombopag',
-      quantity: 90,
-      price: 550,
-      expiry: 2021,
-      status: true
-    },
-    {
-      id: 103,
-      name: 'Meloxicam',
-      quantity: 85,
-      price: 450,
-      expiry: 2025,
+      name: "ajay",
+      age: 25,
+      salary: 38000,
+      bonus: 2000,
       status: false
     },
     {
-      id: 104,
-      name: 'Allopurinol',
-      quantity: 50,
-      price: 600,
-      expiry: 2023,
+      name: "mayur",
+      age: 23,
+      salary: 50000,
+      bonus: 500,
       status: true
     },
     {
-      id: 105,
-      name: 'Phenytoin',
-      quantity: 63,
-      price: 250,
-      expiry: 2021,
-      status: false
-    }
-  ];
-
-  let fData = data.filter((d,i) => d.status === true && d.expiry >= 2022);
-  let ans = fData.reduce((acc, d, i) => acc + d.price ,0);
+      name: "jay",
+      age: 29,
+      salary: 35000,
+      bonus: 600,
+      status: true
+    },
+    {
+      name: "raj",
+      age: 33,
+      salary: 22000,
+      bonus: 2000,
+      status: true
+    },
+  ]
+  let fData = data.filter((d,i) => d.status === true);
+  let ans = fData.reduce((acc, d, i) => acc + d.salary + d.bonus ,0);
   console.log(ans);
 
   return (
     <div>
       <table border="1">
         <tr>
-          <th>id</th>
           <th>name</th>
-          <th>quantity</th>
-          <th>price</th>
-          <th>expiry</th>
+          <th>age</th>
+          <th>salary</th>
+          <th>bonus</th>
           <th>status</th>
-          <th>totel price</th>
+          <th>salary + bonus</th>
+          <th>total salary</th>
         </tr>
         {
           fData.map((d,i) => {
-            let { id, name,quantity, price, expiry, status} = d;
+            let {  name, age, salary, bonus, status} = d;
             return(
-            <tr>
-              <td>{id}</td>
+            <tr key={i}>
               <td>{name}</td>
-              <td>{quantity}</td>
-              <td>{price}</td>
-              <td>{expiry}</td>
+              <td>{age}</td>
+              <td>{salary}</td>
+              <td>{bonus}</td>
               <td>{status.toString()}</td>
-              {i === 0 ? <td rowSpan={5}>{ans}</td> : null}
+              <td>{salary + bonus}</td>
+              {i === 0 ? <td rowSpan={4}>{ans}</td> : null}
             </tr>
             )
           })
