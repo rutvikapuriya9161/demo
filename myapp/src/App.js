@@ -1,18 +1,22 @@
 import React, { Component } from 'react';
 import City from './containers/City';
-import Country from './containers/City';
 import CityFun from './containers/CityFun';
-import CountryFun from './containers/CityFun';
+import Country from './containers/Country';
+import CountryFun from './containers/CountryFun';
 
 class App extends Component {
   render() {
     return (
       <div>
-        {/* <City /> */}
+        <City />
         <CityFun />
+        <Country />
+        <CountryFun />
       </div>
     );
   }
 }
+
+
 
 export default App;
